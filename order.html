@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AA Truck and Bus Systems</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body style="background-color: lightgray;">
+    <nav class="navbar">
+        <div class="brand-title">AA Truck and Bus Systems</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="specials.html">Specials</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Order Form</h1>
+            <form class="row" id="myForm" action="https://formsubmit.co/coyle@aatruckandbus.com" method="POST"
+                onsubmit="return validateForm()">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display: none;">
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Add success.html Success Message Link-->
+                <input type="hidden" name="_next" value="https://coylewashere.github.io/aaformsubmit/success.html">
+
+                <!-- CC Multiple Emails -->
+                <input type="hidden" name="_cc" value="gerald@aatruckandbus.com,candelario@aatruckandbus.com,rios@aatruckandbus.com,bill@allsysbrake.com">
+
+                <div class="col-6">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="First&nbsp;Name" placeholder="Your name.." required>
+                </div>
+
+                <div class="col-6">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="Last&nbsp;Name" placeholder="Your last name.." required>
+                </div>
+
+                <div class="col-8">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" placeholder="Your email.." required>
+                </div>
+
+                <div class="col-8">
+                    <label for="location">Branch</label>
+                    <select name="Branch" id="branch">
+                        <option value="BRAINTREE">BRAINTREE</option>
+                        <option value="WEST WARWICK">WEST WARWICK</option>
+                        <option value="BRIDGEPORT">BRIDGEPORT</option>
+                        <option value="HOBOKEN">HOBOKEN</option>
+                        <option value="SECAUCUS">SECAUCUS</option>
+                        <option value="LEONARDO">LEONARDO</option>
+                        <option value="TOMS RIVER">TOMS RIVER</option>
+                        <option value="WESTAMPTON">WESTAMPTON</option>
+                        <option value="BALTIMORE">BALTIMORE</option>
+                        <option value="CAPITOL HEIGHTS">CAPITOL HEIGHTS</option>
+                        <option value="BRISTOW">BRISTOW</option>
+                        <option value="DURHAM">DURHAM</option>
+                        <option value="CHARLOTTE">CHARLOTTE</option>
+                        <option value="ATLANTA">ATLANTA</option>
+                        <option value="JACKSONVILLE">JACKSONVILLE</option>
+                        <option value="ORLANDO">ORLANDO</option>
+                        <option value="WEST PALM BEACH">WEST PALM BEACH</option>
+                        <option value="FT. LAUDERDALE">FT. LAUDERDALE</option>
+                        <option value="CLEARWATER">CLEARWATER</option>
+                        <option value="MIAMI">MIAMI</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <label for="subject" class="text-center"><b>Place Your Order
+                            <div>
+                                <input type="button" id="addPart" value="Add Part" onclick="addInput()">
+                                <input type="button" id="removePart" value="Remove" onclick="removeInput()">
+                            </div>
+                        </b></label>
+                </div>
+                <!--<table class="col-12" id="orderList">
+                    <tr>
+                        <td>
+                            <div class="text-center">
+                                <label>Part #</label>
+                            </div>
+                            <textarea id="part" name="Parts"
+                                placeholder="Write Part Numbers Seperated by a comma. 4707Q, 33033, A001.830.51.72, 1070368"
+                                style="height:200px"></textarea>
+                        </td>
+                        <td>
+                            <div class="text-center">
+                                <label>Quantity</label>
+                            </div> <textarea id="quantity" name="Quantity"
+                                placeholder="Write Correlating Quantity Seperated by a comma. 4, 4, 2, 8"
+                                style="height:200px"></textarea>
+                        </td>
+                        <td>
+                            <div class="text-center">
+                                <label>Description</label>
+                            </div> <textarea id="description" name="Description"
+                                placeholder="Write a Brief Description about the parts.."
+                                style="height:200px"></textarea>
+                        </td>
+                    </tr>
+                </table>-->
+
+                <div id="partNumber" class="col-3 text-center">
+                    <p>Part #</p>
+                    <!--<label for="partNumber">Part #</label>
+                    <input type="text" id="partNumber" name="Part&nbsp;Number" placeholder="Part #" required>-->
+                </div>
+                <div id="quantity" class="col-3 text-center">
+                    <p>Quantity</p>
+                    <!--<label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" name="Quantity" placeholder="Quantity" required>-->
+                </div>
+                <div id="description" class="col-6 text-center">
+                    <p>Description</p>
+                    <!--<label for="description">Description</label>
+                    <input type="text" id="description" name="Description" placeholder="Brief Description" required>-->
+                </div>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <h4>Site Map</h4>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="order.html">Order</a></p>
+        <p><a href="specials.html">Specials</a></p>
+        <small>
+            Copyright © 2023 AA Truck and Bus Systems. All Rights Reserved.
+        </small>
+    </footer>
+    <script src="script.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
