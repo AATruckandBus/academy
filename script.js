@@ -80,3 +80,11 @@ function removeInput(){
 
     number -= 1
   }
+
+
+  function customMessage() {
+
+    const poNumber = document.getElementById("po")
+
+    return "Thank You For Your Order, Use " + poNumber + " To Track This Order"
+  }
